@@ -1,0 +1,26 @@
+.header {
+    background-color: #1976d2;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header h2 {
+    margin: 0;
+}
+.manage .table{
+    height: min-content;
+    min-width: 90%!important;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.editBtn{
+    margin-right: 10px;
+}

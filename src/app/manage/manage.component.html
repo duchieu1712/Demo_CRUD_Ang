@@ -1,0 +1,57 @@
+<div class="manage">
+  <div class="header">
+    <h2>Demo Angular</h2>
+    <a routerLink="/createUser"
+      ><button mat-flat-button color="primary">Create User</button></a
+    >
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id Number</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Age</th>
+      <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef>Options</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openDialog(element)"
+          class="editBtn"
+        >
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="getDeleteID(element.id)"
+        >
+          Delete
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

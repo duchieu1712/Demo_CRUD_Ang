@@ -1,0 +1,18 @@
+<div class="createUser">
+  <h2>Create User</h2>
+  <form #userForm="ngForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput ngModel name="name" class="form-control" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput ngModel name="age" class="form-control" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput ngModel name="email" class="form-control" />
+    </mat-form-field>
+    <button (click)="submit(userForm.value)">Submit</button>
+  </form>
+</div>
